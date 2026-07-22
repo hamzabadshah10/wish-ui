@@ -863,6 +863,29 @@ body.bright-night {
     overflow: hidden;
 }
 
+@keyframes superBlink {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 15px rgba(244, 63, 94, 0.4);
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 40px rgba(244, 63, 94, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+        background: linear-gradient(135deg, #f43f5e, #fb7185);
+        color: #ffffff;
+        text-shadow: 0 0 8px rgba(255,255,255,0.8);
+        transform: scale(1.05);
+    }
+}
+
+.blink-active {
+    opacity: 1 !important;
+    animation: superBlink 1.2s ease-in-out infinite alternate !important;
+}
+
 /* Button shine effect */
 .action-btn::before {
     content: '';

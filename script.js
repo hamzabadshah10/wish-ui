@@ -64,18 +64,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    if(beginBtn) {
+        setTimeout(() => {
+            beginBtn.classList.add('blink-active');
+        }, 4500); // Blink after it fades in
+    }
     
-    const letterText = `Dear Musfira Ahmed,
-Today is all about celebrating someone truly wonderful.
-You are one of the kindest, strongest, and most amazing people I have ever known.
+    const letterText = `Dear Musfira Ahmed 🌸✨,
+Today is all about celebrating someone truly wonderful 🎉🥳.
+You are one of the kindest, strongest, and most amazing people I have ever known 💖.
 Thank you for always being such a great friend.
-Your kindness, your smile, and your positivity make every moment brighter.
-May this new year of your life bring endless happiness, success, peace, good health, and beautiful memories.
-Keep smiling.
-Keep believing in yourself.
-Never stop being the amazing person you are.
-Happy Birthday once again.
-Best Wishes,
+Your kindness, your smile 😊, and your positivity make every moment brighter ☀️.
+May this new year of your life bring endless happiness 🦋, success 🌟, peace 🕊️, good health 🍀, and beautiful memories 📸.
+Keep smiling 😁.
+Keep believing in yourself 💫.
+Never stop being the amazing person you are 👑.
+Happy Birthday once again 🎊🎂🎈.
+Best Wishes 💌,
 Hamza Badshah ❤️🎂`;
 
     // Handle transition to message card
@@ -136,6 +141,7 @@ Hamza Badshah ❤️🎂`;
                         nextBtn.style.display = 'inline-block';
                         void nextBtn.offsetWidth;
                         nextBtn.style.opacity = 1;
+                        nextBtn.classList.add('blink-active');
                         const nextHelper = document.getElementById('next-helper');
                         if (nextHelper) {
                             nextHelper.style.display = 'block';
@@ -199,11 +205,13 @@ Hamza Badshah ❤️🎂`;
             void glowingHeartEnd.offsetWidth;
             glowingHeartEnd.classList.add('visible');
             
-            if(ultimateBtn) {
-                setTimeout(() => {
-                    ultimateBtn.style.display = 'block';
+            // Show final button
+            setTimeout(() => {
+                if (ultimateBtn) {
+                    ultimateBtn.style.display = 'inline-block';
                     void ultimateBtn.offsetWidth;
                     ultimateBtn.style.opacity = 1;
+                    ultimateBtn.classList.add('blink-active');
                     const ultimateHelper = document.getElementById('ultimate-helper');
                     if (ultimateHelper) {
                         ultimateHelper.style.display = 'block';
@@ -384,6 +392,9 @@ Hamza Badshah ❤️🎂`;
                         setTimeout(() => {
                             mainCard.classList.add('active');
                             triggerReveal();
+                            setTimeout(() => {
+                                if (readMsgBtn) readMsgBtn.classList.add('blink-active');
+                            }, 1500); // Wait for fade in
                         }, 100);
                     }, 800);
                 }, 1000);
