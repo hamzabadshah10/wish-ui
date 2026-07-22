@@ -92,7 +92,7 @@ Your Best Friend ❤️🎂`;
     if(readMsgBtn) {
         readMsgBtn.addEventListener('click', () => {
             // Fade out the reveal content
-            mainCard.style.transition = "opacity 1s ease, transform 1s ease";
+            mainCard.style.transition = "opacity 0.6s ease, transform 0.6s ease";
             mainCard.style.opacity = 0;
             mainCard.style.transform = "translateY(-30px)";
             
@@ -106,7 +106,7 @@ Your Best Friend ❤️🎂`;
                 messageCard.classList.remove('hidden');
                 
                 startLetterTypewriter();
-            }, 1000);
+            }, 600);
         });
     }
 
@@ -123,9 +123,9 @@ Your Best Friend ❤️🎂`;
                 }
                 index++;
                 
-                let delay = 40; // Fast typing base speed
+                let delay = 25; // Fast typing base speed
                 if (letterText.charAt(index - 1) === '.' || letterText.charAt(index - 1) === ',') {
-                    delay = 300; // Pause briefly at punctuation
+                    delay = 150; // Pause briefly at punctuation
                 }
                 
                 // Auto scroll if content exceeds card height
@@ -142,7 +142,7 @@ Your Best Friend ❤️🎂`;
                         nextBtn.style.display = 'inline-block';
                         void nextBtn.offsetWidth;
                         nextBtn.style.opacity = 1;
-                    }, 1000);
+                    }, 500);
                 }
             }
         }
@@ -153,7 +153,7 @@ Your Best Friend ❤️🎂`;
     // Handle transition to final words
     if(nextBtn) {
         nextBtn.addEventListener('click', () => {
-            messageCard.style.transition = "opacity 1s ease, transform 1s ease";
+            messageCard.style.transition = "opacity 0.6s ease, transform 0.6s ease";
             messageCard.style.opacity = 0;
             messageCard.style.transform = "translateY(-30px)";
             
@@ -164,16 +164,16 @@ Your Best Friend ❤️🎂`;
                 finalWordsSection.classList.remove('hidden');
                 
                 startFinalAnimation();
-            }, 1000);
+            }, 600);
         });
     }
 
     function startFinalAnimation() {
         setTimeout(() => {
             finalTitle.classList.add('visible');
-        }, 500);
+        }, 300);
 
-        let delay = 2000;
+        let delay = 1000;
         finalSentences.forEach((text, index) => {
             const p = document.createElement('p');
             p.classList.add('final-sentence');
@@ -185,7 +185,7 @@ Your Best Friend ❤️🎂`;
                 finalWordsSection.scrollTop = finalWordsSection.scrollHeight;
             }, delay);
             
-            delay += 2500; // Time between each sentence
+            delay += 1200; // Time between each sentence
         });
 
         setTimeout(() => {
@@ -200,7 +200,7 @@ Your Best Friend ❤️🎂`;
                     void ultimateBtn.offsetWidth;
                     ultimateBtn.style.opacity = 1;
                     finalWordsSection.scrollTop = finalWordsSection.scrollHeight;
-                }, 2000);
+                }, 1000);
             }
         }, delay + 500);
     }
@@ -208,7 +208,7 @@ Your Best Friend ❤️🎂`;
     // Handle transition to ultimate surprise
     if(ultimateBtn) {
         ultimateBtn.addEventListener('click', () => {
-            finalWordsSection.style.transition = "opacity 1s ease, transform 1s ease";
+            finalWordsSection.style.transition = "opacity 0.6s ease, transform 0.6s ease";
             finalWordsSection.style.opacity = 0;
             finalWordsSection.style.transform = "translateY(-30px)";
             
@@ -219,7 +219,7 @@ Your Best Friend ❤️🎂`;
                 ultimateSection.classList.remove('hidden');
                 
                 triggerUltimateCelebration();
-            }, 1000);
+            }, 600);
         });
     }
 
@@ -284,7 +284,7 @@ Your Best Friend ❤️🎂`;
         if (typeIndex < textToType.length) {
             typewriterEl.innerHTML += textToType.charAt(typeIndex);
             typeIndex++;
-            setTimeout(typeWriter, 100);
+            setTimeout(typeWriter, 50);
         } else {
             // Stop blinking cursor after typing is done
             setTimeout(() => {
@@ -297,7 +297,7 @@ Your Best Friend ❤️🎂`;
     setTimeout(() => {
         typewriterEl.classList.add('typewriter-cursor');
         typeWriter();
-    }, 2800);
+    }, 1500);
 
     // Loading Screen Logic
     const loadingSection = document.getElementById('loading-section');
@@ -325,14 +325,14 @@ Your Best Friend ❤️🎂`;
             loadingSection.classList.add('active');
             
             startLoading();
-        }, 1500); // Wait for fade out
+        }, 800); // Wait for fade out
     });
 
     function startLoading() {
         let progress = 0;
         let phraseIndex = 0;
         
-        // Change text every 2 seconds
+        // Change text every 1.2 seconds
         const textInterval = setInterval(() => {
             phraseIndex++;
             if (phraseIndex < loadingPhrases.length) {
@@ -340,13 +340,13 @@ Your Best Friend ❤️🎂`;
                 setTimeout(() => {
                     loadingText.innerText = loadingPhrases[phraseIndex];
                     loadingText.style.opacity = 1;
-                }, 500);
+                }, 300);
             }
-        }, 2000);
+        }, 1200);
 
         // Progress bar simulation
         const progressInterval = setInterval(() => {
-            progress += Math.random() * 2.5; 
+            progress += Math.random() * 5; 
             
             if (progress >= 100) {
                 progress = 100;
@@ -374,9 +374,9 @@ Your Best Friend ❤️🎂`;
                         setTimeout(() => {
                             mainCard.classList.add('active');
                             triggerReveal();
-                        }, 300);
-                    }, 1500);
-                }, 1800);
+                        }, 100);
+                    }, 800);
+                }, 1000);
             } else {
                 progressBar.style.width = `${progress}%`;
                 progressPercentage.innerText = `${Math.floor(progress)}%`;
