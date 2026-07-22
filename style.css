@@ -269,16 +269,16 @@ body {
 .reveal-name-container {
     text-align: center;
     margin-top: 1rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
     padding: 2.5rem 4.5rem;
-    border-radius: 24px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3),
-                inset 0 0 20px rgba(255, 255, 255, 0.03);
+    border-radius: 28px;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6),
+                inset 0 0 30px rgba(167, 139, 250, 0.15);
 }
 
 .reveal-sub {
@@ -318,15 +318,15 @@ body {
 
 /* Glass Base for Cards */
 .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 24px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3),
-                inset 0 0 20px rgba(255, 255, 255, 0.03);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border-radius: 28px;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6),
+                inset 0 0 30px rgba(167, 139, 250, 0.15);
 }
 
 /* Content Cards Base Styles */
@@ -349,9 +349,13 @@ body {
 /* Letter CSS */
 .letter-content {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: var(--text-main);
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 2.1;
+    color: #fdf8ff;
+    min-height: 100px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 #message-card::-webkit-scrollbar {
@@ -546,9 +550,9 @@ body.bright-night {
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: skewX(-20deg);
-    animation: glassShine 8s infinite;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+    transform: skewX(-25deg);
+    animation: glassShine 6s infinite;
     pointer-events: none;
 }
 
