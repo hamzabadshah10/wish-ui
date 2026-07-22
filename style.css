@@ -343,9 +343,9 @@ body {
     padding: 3.5rem;
     width: calc(100% - 40px);
     z-index: 20;
-    max-height: 100vh;
-    max-height: 100svh;
-    overflow: hidden;
+    max-height: 85vh;
+    max-height: 85svh;
+    overflow-y: auto;
 }
 #final-words-section { padding: 4rem; }
 #ultimate-surprise-section { padding: 4rem; }
