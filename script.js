@@ -623,32 +623,33 @@ Your Best Friend ❤️🎂`;
         }
     });
 
-    // Function to create background hearts & cakes
+    // Function to create background celebration emojis
     function createBgHearts() {
-        const heartCount = window.innerWidth < 768 ? 15 : 30; // Increased amount
-        const symbols = ['❤️', '🎂', '✨'];
+        const heartCount = window.innerWidth < 768 ? 40 : 100; // Massively increased amount
+        const symbols = ['❤️', '🎂', '✨', '🎈', '🎉', '🎁', '💖', '🌸'];
         for (let i = 0; i < heartCount; i++) {
             const heart = document.createElement('div');
             heart.classList.add('bg-heart');
             heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
             
             const x = Math.random() * 100;
-            const size = Math.random() * 1.5 + 0.8; // Slightly larger
-            const duration = Math.random() * 15 + 15; // 15-30s
+            const size = Math.random() * 2 + 1; // Larger emojis
+            const duration = Math.random() * 12 + 8; // 8-20s (faster floating)
             const delay = Math.random() * 20;
             
-            heart.style.left = `${x}%`;
+            heart.style.left = `${x}vw`;
+            heart.style.bottom = `-50px`;
             heart.style.fontSize = `${size}rem`;
             heart.style.animationDuration = `${duration}s`;
-            heart.style.animationDelay = `-${delay}s`;
+            heart.style.animationDelay = `-${delay}s`; // Negative delay to fill screen immediately
             
-            container.appendChild(heart);
+            document.getElementById('particles-container').appendChild(heart);
         }
     }
 
     // Function to create fireflies
     function createFireflies() {
-        const fireflyCount = window.innerWidth < 768 ? 15 : 30;
+        const fireflyCount = window.innerWidth < 768 ? 20 : 40; // More fireflies
         for (let i = 0; i < fireflyCount; i++) {
             const firefly = document.createElement('div');
             firefly.classList.add('firefly');
