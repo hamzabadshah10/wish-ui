@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Music Player -->
     <audio id="bg-music" loop preload="auto">
@@ -20,10 +24,10 @@
         <span class="icon">🎵</span>
         <span class="text">Play Music</span>
     </button>
-    
+
     <!-- Mouse Glow Effect -->
     <div class="mouse-glow" id="mouse-glow"></div>
-    
+
     <div id="canvas-container">
         <!-- Premium Background Elements -->
         <div class="moon"></div>
@@ -31,9 +35,9 @@
         <div class="cloud cloud-2"></div>
         <div class="cloud cloud-3"></div>
     </div>
-    
+
     <main class="container">
-        
+
         <!-- Landing Screen -->
         <section id="landing-section" class="screen active">
             <h1 class="landing-title">Someone very special deserves something special...</h1>
@@ -56,7 +60,7 @@
         <section id="main-section" class="screen hidden">
             <div id="confetti-container"></div>
             <div id="balloon-container"></div>
-            
+
             <div class="reveal-content" id="main-card">
                 <div class="cake-container fade-in-up delay-1">
                     <div class="cake">
@@ -75,44 +79,52 @@
                 </div>
 
                 <h1 class="reveal-heading fade-in-up delay-2">🎉 Happy Birthday 🎉</h1>
-                
+
                 <div class="reveal-name-container fade-in-up delay-3">
                     <h2 class="reveal-sub">Happy Birthday</h2>
                     <h1 class="reveal-name">Musfira Ahmed ❤️🎂</h1>
                 </div>
-                
-                <button class="action-btn fade-in-up delay-4" id="read-msg-btn" style="margin-top: 2.5rem;">Open your Gift 💌</button>
+
+                <button class="action-btn fade-in-up delay-4" id="read-msg-btn" style="margin-top: 2.5rem;">Open your
+                    Gift 💌</button>
             </div>
-            
+
             <!-- Message Card Screen -->
             <div class="glass-card hidden content-card" id="message-card" style="display: none; text-align: left;">
                 <div class="letter-content" id="letter-content"></div>
                 <div style="text-align: right; margin-top: 2rem;">
-                    <button class="action-btn" id="next-btn" style="padding: 0.8rem 2rem; font-size: 1rem; display: none; opacity: 0; transition: opacity 1s ease;">One Last Thing ✨</button>
+                    <button class="action-btn" id="next-btn"
+                        style="padding: 0.8rem 2rem; font-size: 1rem; display: none; opacity: 0; transition: opacity 1s ease;">One
+                        Last Thing ✨</button>
                 </div>
             </div>
-            
+
             <!-- Final Words Screen -->
-            <div class="glass-card hidden content-card" id="final-words-section" style="display: none; text-align: center; z-index: 30;">
+            <div class="glass-card hidden content-card" id="final-words-section"
+                style="display: none; text-align: center; z-index: 30;">
                 <h2 class="final-title">A Few Words From Me ❤️🎂</h2>
                 <div class="final-sentences" id="final-sentences">
                     <!-- Sentences injected via JS -->
                 </div>
                 <div class="glowing-heart-end" id="glowing-heart-end" style="display: none;">❤️🎂</div>
-                <button class="action-btn" id="ultimate-btn" style="display: none; padding: 1.2rem 3rem; font-size: 1.2rem; margin: 3rem auto 0 auto; opacity: 0; transition: opacity 1s ease;">Open Your Final Surprise 🎁</button>
+                <button class="action-btn" id="ultimate-btn"
+                    style="display: none; padding: 1.2rem 3rem; font-size: 1.2rem; margin: 3rem auto 0 auto; opacity: 0; transition: opacity 1s ease;">Open
+                    Your Final Surprise 🎁</button>
             </div>
-            
+
             <!-- Ultimate Surprise Screen -->
-            <div class="glass-card hidden content-card" id="ultimate-surprise-section" style="display: none; text-align: center; z-index: 40; max-width: 900px;">
+            <div class="glass-card hidden content-card" id="ultimate-surprise-section"
+                style="display: none; text-align: center; z-index: 40; max-width: 900px;">
                 <div class="ultimate-message fade-in-up delay-1">
                     <p>No matter where life takes us,</p>
                     <p>I hope you always stay happy,</p>
                     <p>keep smiling,</p>
                     <p>and remember that you'll always have a friend cheering for you.</p>
                 </div>
-                
+
                 <h1 class="reveal-name fade-in-up delay-3 ultimate-name">Happy Birthday Musfira Ahmed ❤️🎂</h1>
-                <div class="glowing-heart-end fade-in-up delay-4" style="display: inline-block; animation-delay: 5s;">❤️🎂</div>
+                <div class="glowing-heart-end fade-in-up delay-4" style="display: inline-block; animation-delay: 5s;">
+                    ❤️🎂</div>
             </div>
         </section>
 
@@ -120,4 +132,6 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
+\
