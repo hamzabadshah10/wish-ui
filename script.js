@@ -86,7 +86,7 @@ Never stop being the amazing person you are.
 Happy Birthday once again.
 
 Best Wishes,
-Your Best Friend ❤️`;
+Your Best Friend ❤️🎂`;
 
     // Handle transition to message card
     if(readMsgBtn) {
@@ -237,8 +237,8 @@ Your Best Friend ❤️`;
                     confetti.classList.add('confetti-piece');
                     confetti.style.left = `${Math.random() * 100}%`;
                     confetti.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-                    confetti.style.animationDuration = `${Math.random() * 4 + 3}s`;
-                    confetti.style.transform = `rotate(${Math.random() * 360}deg) scale(${Math.random() * 1.5 + 0.5})`;
+                    confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg) scale(${Math.random() * 2 + 1})`;
                     confettiContainer.appendChild(confetti);
                     setTimeout(() => confetti.remove(), 7000);
                 }, i * 15);
@@ -449,7 +449,7 @@ Your Best Friend ❤️`;
     function createHeart() {
         const heart = document.createElement('div');
         heart.classList.add('floating-heart');
-        heart.innerHTML = '❤️';
+        heart.innerHTML = Math.random() > 0.4 ? '❤️' : '🎂';
         
         const offset = (Math.random() - 0.5) * 150;
         heart.style.left = `calc(50% + ${offset}px)`;
@@ -602,7 +602,7 @@ Your Best Friend ❤️`;
                 { transform: 'translate(0, 0) scale(1)', opacity: 1 },
                 { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
             ], {
-                duration: Math.random() * 1200 + 1000,
+                duration: Math.random() * 1500 + 1200, // Longer hang time
                 easing: 'cubic-bezier(0, .9, .57, 1)'
             });
             
@@ -623,16 +623,17 @@ Your Best Friend ❤️`;
         }
     });
 
-    // Function to create background hearts
+    // Function to create background hearts & cakes
     function createBgHearts() {
-        const heartCount = window.innerWidth < 768 ? 10 : 20;
+        const heartCount = window.innerWidth < 768 ? 15 : 30; // Increased amount
+        const symbols = ['❤️', '🎂', '✨'];
         for (let i = 0; i < heartCount; i++) {
             const heart = document.createElement('div');
             heart.classList.add('bg-heart');
-            heart.innerHTML = '❤️';
+            heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
             
             const x = Math.random() * 100;
-            const size = Math.random() * 1.5 + 0.5;
+            const size = Math.random() * 1.5 + 0.8; // Slightly larger
             const duration = Math.random() * 15 + 15; // 15-30s
             const delay = Math.random() * 20;
             

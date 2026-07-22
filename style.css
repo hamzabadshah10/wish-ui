@@ -900,37 +900,32 @@ body.bright-night {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .title {
+    .landing-title { font-size: 2.2rem; }
+    .title { font-size: 2.5rem; }
+    .reveal-heading { font-size: 1.8rem; }
+    .reveal-name { font-size: 2.2rem; }
+    .message { font-size: 1rem; }
+    .letter-content { font-size: 1rem; }
+    #message-card, #final-words-section, #ultimate-surprise-section {
+        padding: 2rem 1.2rem !important;
+        width: 95%;
+    }
+    .final-title { font-size: 1.8rem; }
+    .final-sentence { font-size: 1.1rem; }
+    .ultimate-message p { font-size: 1.2rem; }
+    
+    .cake-container {
+        transform: scale(0.85);
+        margin-top: 1rem;
+    }
+    .reveal-name-container {
+        padding: 1.5rem 1rem;
+        width: 95%;
+    }
+    #ultimate-surprise-section h1.reveal-name {
+        font-size: 2rem !important;
+    }
+    .glowing-heart-end {
         font-size: 3.5rem;
     }
-}
-
-@media (max-width: 480px) {
-    .landing-title {
-        font-size: 2rem;
-    }
-    .landing-subtitle {
-        font-size: 1.1rem;
-    }
-    .glass-card {
-        padding: 2.5rem 1.5rem;
-    }
-    .title {
-        font-size: 2.8rem;
-    }
-    .wish-title {
-        font-size: 2.2rem;
-    }
-    .message {
-        font-size: 1rem;
-    }
-    .letter-content {
-        font-size: 1.1rem;
-    }
-    #message-card, #final-words-section, #ultimate-surprise-section {
-        padding: 2.5rem 1.5rem !important;
-    }
-    .final-title { font-size: 2rem; }
-    .final-sentence { font-size: 1.2rem; }
-    .ultimate-message p { font-size: 1.3rem; }
 }
