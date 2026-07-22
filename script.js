@@ -128,9 +128,6 @@ Hamza Badshah ❤️🎂`;
                     delay = 150; // Pause briefly at punctuation
                 }
                 
-                // Auto scroll if content exceeds card height
-                messageCard.scrollTop = messageCard.scrollHeight;
-                
                 setTimeout(type, delay);
             } else {
                 // Attach blinking cursor at the end
@@ -142,6 +139,12 @@ Hamza Badshah ❤️🎂`;
                         nextBtn.style.display = 'inline-block';
                         void nextBtn.offsetWidth;
                         nextBtn.style.opacity = 1;
+                        const nextHelper = document.getElementById('next-helper');
+                        if (nextHelper) {
+                            nextHelper.style.display = 'block';
+                            void nextHelper.offsetWidth;
+                            nextHelper.style.opacity = 1;
+                        }
                     }, 500);
                 }
             }
@@ -182,7 +185,6 @@ Hamza Badshah ❤️🎂`;
             
             setTimeout(() => {
                 p.classList.add('visible');
-                finalWordsSection.scrollTop = finalWordsSection.scrollHeight;
             }, delay);
             
             delay += 1200; // Time between each sentence
@@ -192,14 +194,18 @@ Hamza Badshah ❤️🎂`;
             glowingHeartEnd.style.display = 'block';
             void glowingHeartEnd.offsetWidth;
             glowingHeartEnd.classList.add('visible');
-            finalWordsSection.scrollTop = finalWordsSection.scrollHeight;
             
             if(ultimateBtn) {
                 setTimeout(() => {
                     ultimateBtn.style.display = 'block';
                     void ultimateBtn.offsetWidth;
                     ultimateBtn.style.opacity = 1;
-                    finalWordsSection.scrollTop = finalWordsSection.scrollHeight;
+                    const ultimateHelper = document.getElementById('ultimate-helper');
+                    if (ultimateHelper) {
+                        ultimateHelper.style.display = 'block';
+                        void ultimateHelper.offsetWidth;
+                        ultimateHelper.style.opacity = 1;
+                    }
                 }, 1000);
             }
         }, delay + 500);

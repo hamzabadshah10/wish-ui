@@ -43,6 +43,7 @@
             <h1 class="landing-title">Someone very special deserves something special...</h1>
             <p class="landing-subtitle" id="typewriter"></p>
             <button class="glowing-btn" id="begin-btn">Begin the Surprise ❤️🎂</button>
+            <p class="pulse-text" style="opacity: 0; animation: fadeIn 1.5s forwards; animation-delay: 3.5s;">Tap here to start! ✨</p>
         </section>
         <!-- Loading Screen -->
         <section id="loading-section" class="screen hidden">
@@ -87,15 +88,17 @@
 
                 <button class="action-btn fade-in-up delay-4" id="read-msg-btn" style="margin-top: 2.5rem;">Open your
                     Gift 💌</button>
+                <p class="pulse-text fade-in-up delay-4" style="margin-top: 0.5rem;">Tap here to open! ✨</p>
             </div>
 
             <!-- Message Card Screen -->
             <div class="glass-card hidden content-card" id="message-card" style="display: none; text-align: left;">
                 <div class="letter-content" id="letter-content"></div>
-                <div style="text-align: right; margin-top: 2rem;">
+                <div style="text-align: right; margin-top: 2rem; padding-bottom: 1rem;">
                     <button class="action-btn" id="next-btn"
                         style="padding: 0.8rem 2rem; font-size: 1rem; display: none; opacity: 0; transition: opacity 1s ease;">One
                         Last Thing ✨</button>
+                    <p class="pulse-text" id="next-helper" style="display: none; opacity: 0; transition: opacity 1s ease;">Tap here for more! ✨</p>
                 </div>
             </div>
 
@@ -108,8 +111,9 @@
                 </div>
                 <div class="glowing-heart-end" id="glowing-heart-end" style="display: none;">❤️🎂</div>
                 <button class="action-btn" id="ultimate-btn"
-                    style="display: none; padding: 1.2rem 3rem; font-size: 1.2rem; margin: 3rem auto 0 auto; opacity: 0; transition: opacity 1s ease;">Open
+                    style="display: none; padding: 1.2rem 3rem; font-size: 1.2rem; margin: 3rem auto 0.5rem auto; opacity: 0; transition: opacity 1s ease;">Open
                     Your Final Surprise 🎁</button>
+                <p class="pulse-text" id="ultimate-helper" style="display: none; opacity: 0; transition: opacity 1s ease; margin-bottom: 2rem;">Tap here for your final surprise! ✨</p>
             </div>
 
             <!-- Ultimate Surprise Screen -->
