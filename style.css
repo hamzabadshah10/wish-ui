@@ -968,6 +968,12 @@ body.bright-night {
         font-size: clamp(0.6rem, 2.3vh, 0.95rem);
         line-height: clamp(1.1, 2.6vh, 1.5);
         min-height: auto;
+        overflow-y: auto;
+        flex-grow: 1;
+        scrollbar-width: none; /* Hide scrollbar for clean look */
+    }
+    .letter-content::-webkit-scrollbar {
+        display: none;
     }
     
     /* Override inline styles for buttons */
@@ -984,9 +990,9 @@ body.bright-night {
     .ultimate-message p { font-size: clamp(0.8rem, 2.8vh, 1.1rem); margin-bottom: 0.5rem; }
     .ultimate-name { font-size: clamp(1.3rem, 4vh, 1.8rem) !important; margin-top: 1rem !important; }
     
-    .glowing-btn { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
-    .action-btn { padding: 0.6rem 1.2rem; font-size: 0.85rem; }
-    .pulse-text { margin-bottom: 0.5rem !important; margin-top: 0.5rem !important; }
+    .glowing-btn { padding: 0.8rem 1.5rem; font-size: 0.9rem; box-shadow: 0 0 15px rgba(244, 114, 182, 0.8); }
+    .action-btn { padding: 0.8rem 1.2rem; font-size: 0.9rem; font-weight: 600; box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
+    .pulse-text { margin-bottom: 0.5rem !important; margin-top: 0.5rem !important; font-weight: bold; font-size: 0.85rem; }
 }
 
 /* Helper Text Pulse */
