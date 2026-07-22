@@ -218,8 +218,8 @@ Hamza Badshah ❤️🎂`;
                         void ultimateHelper.offsetWidth;
                         ultimateHelper.style.opacity = 1;
                     }
-                }, 1000);
-            }
+                }
+            }, 1000);
         }, delay + 500);
     }
     
