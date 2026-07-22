@@ -329,6 +329,23 @@ body {
                 inset 0 0 20px rgba(255, 255, 255, 0.03);
 }
 
+/* Content Cards Base Styles */
+.content-card {
+    position: absolute;
+    max-width: 800px;
+    padding: 3.5rem;
+    width: calc(100% - 40px);
+    z-index: 20;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+#final-words-section { padding: 4rem; }
+#ultimate-surprise-section { padding: 4rem; }
+.ultimate-name {
+    margin-top: 3rem;
+    font-size: 3.5rem;
+}
+
 /* Letter CSS */
 .letter-content {
     font-family: 'Outfit', sans-serif;
@@ -900,32 +917,38 @@ body.bright-night {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .landing-title { font-size: 2.2rem; }
-    .title { font-size: 2.5rem; }
-    .reveal-heading { font-size: 1.8rem; }
-    .reveal-name { font-size: 2.2rem; }
+    .landing-title { font-size: 1.8rem; line-height: 1.3; }
+    .landing-subtitle { font-size: 1.1rem; }
+    .title { font-size: 2.2rem; }
+    .reveal-heading { font-size: 1.6rem; }
+    .reveal-name { font-size: 1.8rem; }
     .message { font-size: 1rem; }
     .letter-content { font-size: 1rem; }
-    #message-card, #final-words-section, #ultimate-surprise-section {
+    
+    .content-card, #message-card, #final-words-section, #ultimate-surprise-section {
         padding: 2rem 1.2rem !important;
-        width: 95%;
+        width: 92% !important;
     }
-    .final-title { font-size: 1.8rem; }
-    .final-sentence { font-size: 1.1rem; }
-    .ultimate-message p { font-size: 1.2rem; }
+    .final-title { font-size: 1.6rem; margin-bottom: 1.5rem; }
+    .final-sentence { font-size: 1.1rem; line-height: 1.6; }
+    .ultimate-message p { font-size: 1.1rem; }
     
     .cake-container {
-        transform: scale(0.85);
-        margin-top: 1rem;
+        transform: scale(0.75);
+        margin-top: 0.5rem;
     }
     .reveal-name-container {
-        padding: 1.5rem 1rem;
+        padding: 1.2rem 1rem;
         width: 95%;
     }
-    #ultimate-surprise-section h1.reveal-name {
+    .ultimate-name {
         font-size: 2rem !important;
+        margin-top: 2rem !important;
     }
     .glowing-heart-end {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
+        margin-top: 2rem;
     }
+    .glowing-btn { padding: 1rem 2rem; font-size: 1rem; }
+    .action-btn { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
 }
