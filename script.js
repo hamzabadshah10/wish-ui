@@ -120,7 +120,9 @@ Hamza Badshah ❤️🎂`;
                 
                 // Auto-scroll to bottom as text types
                 if (messageCard) {
-                    messageCard.scrollTop = messageCard.scrollHeight;
+                    requestAnimationFrame(() => {
+                        messageCard.scrollTop = messageCard.scrollHeight;
+                    });
                 }
                 
                 setTimeout(type, delay);
