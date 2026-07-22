@@ -66,25 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     const letterText = `Dear Musfira Ahmed,
-
 Today is all about celebrating someone truly wonderful.
-
 You are one of the kindest, strongest, and most amazing people I have ever known.
-
 Thank you for always being such a great friend.
-
 Your kindness, your smile, and your positivity make every moment brighter.
-
 May this new year of your life bring endless happiness, success, peace, good health, and beautiful memories.
-
 Keep smiling.
-
 Keep believing in yourself.
-
 Never stop being the amazing person you are.
-
 Happy Birthday once again.
-
 Best Wishes,
 Hamza Badshah ❤️🎂`;
 
@@ -117,7 +107,7 @@ Hamza Badshah ❤️🎂`;
         function type() {
             if (index < letterText.length) {
                 if (letterText.charAt(index) === '\n') {
-                    letterContent.innerHTML += '<br>';
+                    letterContent.innerHTML += '<br><div style="height: 1.5vh;"></div>';
                 } else {
                     letterContent.innerHTML += letterText.charAt(index);
                 }
