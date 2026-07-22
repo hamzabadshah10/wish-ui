@@ -86,7 +86,7 @@ Never stop being the amazing person you are.
 Happy Birthday once again.
 
 Best Wishes,
-Your Best Friend ❤️🎂`;
+Hamza Badshah ❤️🎂`;
 
     // Handle transition to message card
     if(readMsgBtn) {
