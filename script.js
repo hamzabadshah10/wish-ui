@@ -118,6 +118,11 @@ Hamza Badshah ❤️🎂`;
                     delay = 150; // Pause briefly at punctuation
                 }
                 
+                // Auto-scroll to bottom as text types
+                if (messageCard) {
+                    messageCard.scrollTop = messageCard.scrollHeight;
+                }
+                
                 setTimeout(type, delay);
             } else {
                 // Attach blinking cursor at the end
@@ -135,6 +140,13 @@ Hamza Badshah ❤️🎂`;
                             void nextHelper.offsetWidth;
                             nextHelper.style.opacity = 1;
                         }
+                        
+                        // Scroll one final time to ensure button is in view
+                        setTimeout(() => {
+                            if (messageCard) {
+                                messageCard.scrollTop = messageCard.scrollHeight;
+                            }
+                        }, 100);
                     }, 500);
                 }
             }
